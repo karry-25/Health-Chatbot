@@ -1,0 +1,239 @@
+      /* Chat.css */
+
+      /* Container for the entire chat component */
+      .chat-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f7f7f7;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Title of the chat component */
+      .chat-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;  
+      }
+
+      /* Chat window styling */
+      .chat-window {
+        width: 100%;
+        height: 400px;
+        overflow-y: auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 15px;
+      }
+
+      /* Styles for chat messages */
+      .message {
+        padding: 8px;
+        margin: 5px 0;
+        border-radius: 5px;
+      }
+
+      .user-message {
+        color: #007bff; /* Bootstrap primary color */
+      }
+
+      .bot-message {
+        background-color: #f1f1f1;
+        align-self: flex-start;
+        color: #000;
+      }
+
+      .input-container {
+        display: flex;
+      }
+
+      /* Chat input section */
+      .chat-input {
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+
+      /* Input group for text and buttons */
+      .input-group {
+        display: flex;
+        width: 100%;
+      }
+
+      .text-input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+        font-size: 16px;
+      }
+
+      /* Send button styling */
+      .send-button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .send-button:disabled {
+        background-color: #cccccc;
+      }
+
+      /* Custom button for downloading emotional history report */
+      /* Custom button for downloading emotional history report */
+      /* Custom button for downloading emotional history report */
+.downloadEmotionalHistoryReport {
+  background: linear-gradient(135deg, #FF6F61, #FFCE54); /* Gradient background */
+  color: white;
+  border: none;
+  border-radius: 50px; /* Increased rounding for a modern look */
+  padding: 20px 50px; /* Larger padding for a bigger button */
+  cursor: pointer;
+  font-size: 28px; /* Larger font size for visibility */
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s; /* Include filter for glow */
+  font-weight: bold; /* Bold text for emphasis */
+  text-transform: uppercase; /* Uppercase text for a professional appearance */
+}
+
+/* Hover effect */
+.downloadEmotionalHistoryReport:hover {
+  transform: translateY(-4px); /* Slightly raise the button */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Increased shadow on hover */
+  filter: brightness(1.1); /* Slight brightness increase for a glowing effect */
+}
+
+/* Active effect */
+.downloadEmotionalHistoryReport:active {
+  transform: translateY(-2px); /* Slightly less elevation on click */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Reduced shadow on active */
+}
+
+/* Decorative ripple effect */
+.downloadEmotionalHistoryReport::after {
+  content: '';
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2); /* Light ripple effect */
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.6s, opacity 0.6s;
+  opacity: 0;
+}
+
+/* Ripple effect on hover */
+.downloadEmotionalHistoryReport:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+
+      /* Microphone button styling */
+      .mic-button {
+        background-color: #2196f3;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        padding: 10px;
+        cursor: pointer;
+        margin-left: 10px;
+        font-size: 18px;
+      }
+
+      /* Recording indicator styling */
+      .recording-indicator {
+        display: flex;
+        align-items: center;
+      }
+
+      .recording-indicator p {
+        margin: 0;
+        padding-right: 10px;
+      }
+
+      .indicator {
+        width: 10px;
+        height: 10px;
+        background-color: red;
+        border-radius: 50%;
+        animation: blink 1s infinite;
+      }
+
+      /* Blinking animation for the recording indicator */
+      @keyframes blink {
+        0%, 50% {
+          opacity: 1;
+        }
+        51%, 100% {
+          opacity: 0;
+        }
+      }
+
+      /* Toggle switch for audio chat */
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 24px;
+        margin-left: 15px;
+      }
+
+      .switch input {
+        display: none;
+      }
+
+      .slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        border-radius: 24px;
+        cursor: pointer;
+        transition: 0.4s;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        background-color: white;
+        border-radius: 50%;
+        bottom: 2px;
+        left: 2px;
+      }
+
+      /* When the toggle is active */
+      input:checked + .slider {
+        background-color: #4caf50;
+      }
+
+      input:checked + .slider:before {
+        transform: translateX(26px);
+      }
+
+      /* Toggle label for audio chat */
+      .toggle-label {
+        margin-left: 10px;
+        font-size: 14px;
+        color: #666;
+      }

@@ -19,6 +19,8 @@ dist/
 # Ignore configuration files
 config.json
 .venv
+venv
+.env
 db.sqlite3
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.

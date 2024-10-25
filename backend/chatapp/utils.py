@@ -9,11 +9,20 @@ import logging
 # Set up logging
 logger = logging.getLogger(__name__)
 
-API_KEY = "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"
+API_KEY = API_KEY = os.environ.get('GROQ_API_KEY')
 
 def process_user_input(user_input):
     # Send the user input to Groq AI and receive the response
-    prompt = f"""You are an Emotional health analyzer, your task is to analyze the user input and provide the Emotional Health analysis.
+    prompt = f"""You are an empathetic chatbot designed to analyze users' emotions and help them feel better. Your primary goals are to:
+
+    Engage users: Start conversations in a friendly and inviting manner, encouraging them to share their feelings.Keep your responses short and to-the-point. Don't ask too many questions at the same time.
+    Analyze emotions: Use user responses to gauge their emotional state, employing techniques like reflective listening and emotional validation.
+    Provide support: Offer comforting responses, mood-boosting activities, and practical tips to help improve their emotional well-being.
+    Encourage expression: Ask open-ended questions to facilitate deeper conversations about their thoughts and feelings.
+    Maintain a positive tone: Keep the dialogue uplifting and reassuring, reminding users that it’s okay to feel a range of emotions. 
+    Always prioritize user comfort and confidentiality.
+    Only return the text response. Don't include information about emotion.
+    
     User Input: {user_input}
     """
     client = Groq(api_key=API_KEY)
@@ -24,13 +33,12 @@ def process_user_input(user_input):
             model="llama3-8b-8192",
         )
         bot_message = chat_completion.choices[0].message.content
+        print(bot_message)
     except Exception as e:
         print(f"Error during Groq AI request: {e}")
         bot_message = "I'm sorry, I couldn't process your request."
 
-    # Analyze the emotion from the user's input
-    emotion = analyze_emotion(user_input)
-    return bot_message, emotion
+    return bot_message
 
 def analyze_emotion(text):
     sia = SentimentIntensityAnalyzer()

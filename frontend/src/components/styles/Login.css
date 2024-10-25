@@ -1,0 +1,166 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #eef2f3; /* Soft calming background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #FFD194, #D1913C); /* Gradient background */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.login-container:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 30px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Purple to blue gradient */
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 26px;
+    color: #ff9f43; /* Bright orange for contrast */
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 25px;
+    background-color: #ff9f43; /* Orange background for buttons */
+    color: white;
+}
+
+.nav-link:hover {
+    background-color: #f0932b; /* Slightly darker orange on hover */
+    opacity: 0.95;
+}
+
+/* Form container */
+.container {
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.03); /* Slight scale on hover */
+}
+
+.login-title {
+    font-size: 28px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.login-subtitle {
+    font-size: 18px;
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    transition: border-color 0.3s ease-in-out;
+    font-size: 16px;
+}
+
+.input-field:focus {
+    border-color: #ff69b4; /* Pink border on focus */
+    outline: none;
+}
+
+.login-btn {
+    padding: 15px;
+    background-color: #ff69b4;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.login-btn:hover {
+    background-color: #ff85c8; /* Lighter pink on hover */
+}
+
+.signup-prompt {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.signup-link {
+    color: #ff69b4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+/* Error message */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}

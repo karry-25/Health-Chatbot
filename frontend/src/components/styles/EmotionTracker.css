@@ -1,0 +1,50 @@
+.emotion-tracker {
+    margin-top: 20px;
+}
+
+.emotion-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.emotion-button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #e0e0e0;
+}
+
+.emotion-button.selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.reflection-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reflection-form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    min-height: 100px;
+}
+
+.submit-reflection {
+    align-self: flex-start;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.emotion-history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.emotion-history li {
+    margin: 10px 0;
+}

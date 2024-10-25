@@ -1,15 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom'; // Import from 'react-dom' for React 16
+import ReactDOM from 'react-dom/client'; // Import from 'react-dom' for React 16
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
 // Render the application using ReactDOM.render
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root') // Specify the root element
+
 );
 
 // If you want to start measuring performance in your app, pass a function
